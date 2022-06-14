@@ -18,6 +18,8 @@ public class TablesPage extends POMBase {
 
     @FindBy(xpath = "//td[count(//table//th[contains(@aria-label,'Office')]/preceding-sibling::*) +1]")
     List<WebElement> officeList;
+    @FindBy(xpath = "//td[count(//table//th[contains(@aria-label,'Age')]/preceding-sibling::*) +1]")
+    List<WebElement> ageList;
 
     public TablesPage(WebDriver driver) {
         super(driver);
@@ -26,5 +28,6 @@ public class TablesPage extends POMBase {
     public List<WebElement> getNamesList() { return namesList; }
     public List<WebElement> getPositionsList() { return positionsList; }
     public List<WebElement> getOfficeList() { return officeList; }
+    public List<WebElement> getAgeList() { return ageList; }
 
 }

@@ -50,11 +50,31 @@ public class Login extends TestBase {
         SideMenuBar sideMenuBar = new SideMenuBar(getDriver());
         sideMenuBar.clickTablesOption();
 
+       // TablesPage tablesPage = new TablesPage(getDriver());
+        //List<WebElement> positions = tablesPage.getPositionsList();
+        //for (WebElement position: positions) {
+          //  System.out.println("Position: " + position.getText());
+       // }
+        //TablesPage tablesPage = new TablesPage(getDriver());
+        //List<WebElement> positions = tablesPage.getNamesList();
+        //for (WebElement position: positions) {
+          //  System.out.println("Names: " + position.getText());
+        //}
+        //TablesPage tablesPage = new TablesPage(getDriver());
+        //List<WebElement> positions = tablesPage.getOfficeList();
+        //for (WebElement position: positions) {
+          //  System.out.println("Office: " + position.getText());
+        //}
         TablesPage tablesPage = new TablesPage(getDriver());
-        List<WebElement> positions = tablesPage.getPositionsList();
-        for (WebElement position: positions) {
-            System.out.println("Position: " + position.getText());
+        List<WebElement> ages = tablesPage.getAgeList();
+        int  age = 0;
+        for (WebElement age: ages) {
+            int mayor=Integer.parseInt(age.getText());
+            if (mayor>age) age=age;
+            System.out.println("El mayor es: " + mayor);
         }
+
+
     }
 
 }
